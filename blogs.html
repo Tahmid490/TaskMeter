@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Blogs</title>
+    <!-- daisyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body id="body" class="bg-[#f5f8ff] min-h-screen">
+    <header class="w-11/12 mx-auto bg-white p-6 my-5 rounded-xl">
+      <nav class="flex justify-between items-center">
+        <div class="flex gap-2 items-center">
+          <img class="w-8 h-8" src="./assets/logo.png" alt="" />
+          <p>Dev<span class="font-bold">Board</span></p>
+        </div>
+        <div>
+          <button
+            id="btn-back"
+            class="bg-[#4329db] text-white font-bold px-4 py-2 rounded-md"
+          >
+            Back to Desk
+          </button>
+        </div>
+      </nav>
+    </header>
+    <h1 class="text-3xl font-bold text-center">Blogs</h1>
+    <section class="w-11/12 mx-auto bg-white p-6 my-5 rounded-xl">
+      <div class="">
+        <h2 class="font-bold mb-2">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </h2>
+        <p>
+          DOM theke ekta element select korar onek upay ache-> ID diye select
+          kora, Class diye select kora, Tag name diye select kora, CSS selector
+          diye select kora Jay 2 vabe.
+        </p>
+      </div>
+    </section>
+    <section class="w-11/12 mx-auto bg-white p-6 my-5 rounded-xl">
+      <div class="">
+        <h2 class="font-bold mb-2">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </h2>
+        <p>
+          HTML lagbe? → innerHTML . Normal text lagbe? → innerText. Shob kichu
+          lagbe? → textContent
+        </p>
+      </div>
+    </section>
+    <section class="w-11/12 mx-auto bg-white p-6 my-5 rounded-xl">
+      <div class="">
+        <h2 class="font-bold mb-2">
+          Question-3: What is event delegation in the DOM?
+        </h2>
+        <p>
+          Event delegation holo ekta parent element er upor event listener
+          bosano
+        </p>
+      </div>
+    </section>
+    <section class="w-11/12 mx-auto bg-white p-6 my-5 rounded-xl">
+      <div class="">
+        <h2 class="font-bold mb-2">
+          Question-4: What is event bubbling in the DOM?
+        </h2>
+        <p>
+          Event Bubbling mane ekta child element e event fire hole, seta parent
+          element porjonto chole jay. Sohoje Child e event fire hole, parent e o
+          chole jay!
+        </p>
+      </div>
+    </section>
+    <section class="w-11/12 mx-auto bg-white p-6 my-5 rounded-xl">
+      <div class="">
+        <h2 class="font-bold mb-2">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </h2>
+        <p>
+          Create: createElement(). Add: appendChild(). Remove: remove() /
+          removeChild()
+        </p>
+      </div>
+    </section>
+    <script src="/script/back.js"></script>
+  </body>
+</html>

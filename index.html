@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>TaskMeeter</title>
+    <!-- daisyUi -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body id="body" class="bg-[#f5f8ff] min-h-screen">
+    <header class="w-11/12 mx-auto bg-white p-6 rounded-xl my-5">
+      <nav class="flex justify-between items-center">
+        <div class="flex gap-2 items-center">
+          <img class="w-8 h-8" src="./assets/logo.png" alt="" />
+          <p>Dev<span class="font-bold">Board</span></p>
+        </div>
+        <div class="flex gap-8">
+          <div class="flex gap-2 items-center rounded-full bg-[#f5f8ff] p-2">
+            <img class="w-4 h-4" src="./assets/checkbox.png" alt="" />
+            <h3 id="nav-add">24</h3>
+          </div>
+          <div class="rounded-full bg-[#f5f8ff] p-2">
+            <img
+              id="color-theme"
+              class="w-8 h-8"
+              src="./assets/theme-btn.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main Section -->
+    <div class="main w-11/12 mx-auto min-h-screen rounded-xl gap-7">
+      <div class="grid grid-cols-12 gap-4">
+        <!-- left side Content (col-span-8) -->
+        <section class="col-span-8 space-y-4 bg-white p-4">
+          <!-- upper cards  -->
+          <div class="grid grid-cols-8 gap-4">
+            <!-- টাস্ক অ্যাসাইনড কার্ড -->
+            <div
+              class="flex items-center gap-4 bg-[#f5f8ff] rounded-md p-4 shadow col-span-2"
+            >
+              <div class="rounded-full bg-white p-4">
+                <img class="w-[22px]" src="./assets/checkbox.png" alt="" />
+              </div>
+              <div>
+                <h5 class="text-sm font-bold">Task Assigned</h5>
+                <h5 id="task" class="text-sm font-bold">6</h5>
+              </div>
+            </div>
+            <!-- নতুন কিছু খুঁজে দেখার কার্ড -->
+            <div
+              class="rounded-md p-4 shadow col-span-4 bg-linear-to-r from-[#3752FD] to-[#9BA8F8]"
+            >
+              <div id="blogs" class="flex items-center gap-4">
+                <img src="./assets/board.png" alt="" />
+                <p class="text-white font-semibold">
+                  Discover Something New Today!
+                </p>
+              </div>
+            </div>
+            <!-- তারিখ কার্ড -->
+            <div
+              class="flex items-center gap-4 bg-[#f5f8ff] rounded-md p-4 shadow col-span-2"
+            >
+              <div class="rounded-full bg-white p-2">
+                <img class="w-8" src="./assets/calender.png" alt="" />
+              </div>
+              <div>
+                <h5 id="date" class="text-sm font-bold">Fri Feb 28 2025</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- all Cards-->
+          <div class="grid grid-cols-3 gap-4">
+            <!-- কার্ড 1 -->
+            <div class="bg-[#f5f8ff] p-4 rounded-md shadow">
+              <h4 class="p-1 rounded-sm bg-white inline-block">ShopEase</h4>
+              <h3 id="title-One" class="font-bold text-lg">
+                Fix Mobile Button Issue
+              </h3>
+              <p class="text-sm text-gray-600 mt-1 rounded-xl bg-white p-2">
+                Debug using Chrome DevTools, check for overlapping CSS...
+              </p>
+              <div class="mt-3 flex items-center justify-between text-sm">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p>2 March 2025</p>
+                </div>
+                <div>
+                  <button
+                    id="btn-One"
+                    class="cards bg-[#4329db] text-white font-bold text-sm px-4 py-2 rounded-md disabled:"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="bg-[#f5f8ff] p-4 rounded-md shadow">
+              <h4 class="p-1 rounded-sm bg-white inline-block">CloudSync</h4>
+              <h3 id="title-Two" class="font-bold text-lg">Add Dark Mode</h3>
+              <p class="text-sm text-gray-600 mt-1 rounded-xl bg-white p-2">
+                Test in different browsers, update CSS variables...
+              </p>
+              <div class="mt-3 flex items-center justify-between text-sm">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p>3 March 2025</p>
+                </div>
+                <div>
+                  <button
+                    id="btn-Two"
+                    class="cards bg-[#4329db] text-white font-bold text-sm px-4 py-2 rounded-md"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="bg-[#f5f8ff] p-4 rounded-md shadow">
+              <h4 class="p-1 rounded-sm bg-white inline-block">SwiftPay</h4>
+              <h3 id="title-Three" class="font-bold text-lg">
+                Optimize Home page 
+              </h3>
+              <p class="text-sm text-gray-600 mt-1 rounded-xl bg-white p-2">
+                Debug using Chrome DevTools, check for overlapping elements.
+              </p>
+              <div class="mt-3 flex items-center justify-between text-sm">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p>9 March 2025</p>
+                </div>
+                <div>
+                  <button
+                    id="btn-Three"
+                    class="bg-[#4329db] cards text-white font-bold text-sm px-4 py-2 rounded-md"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="bg-[#f5f8ff] p-4 rounded-md shadow">
+              <h4 class="p-1 rounded-sm bg-white inline-block">Meta</h4>
+              <h3 id="title-Four" class="font-bold text-lg">
+                Add new emoji 🤲 
+              </h3>
+              <p class="text-sm text-gray-600 mt-1 rounded-xl bg-white p-2">
+                Store the user's preference in localStorage, update CSS
+                variables
+              </p>
+              <div class="mt-3 flex items-center justify-between text-sm">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p>10 March 2025</p>
+                </div>
+                <div>
+                  <button
+                    id="btn-Four"
+                    class="bg-[#4329db] cards text-white font-bold text-sm px-4 py-2 rounded-md"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 5 -->
+            <div class="bg-[#f5f8ff] p-4 rounded-md shadow">
+              <h4 id="title-Five" class="p-1 rounded-sm bg-white inline-block">
+                Google LLC
+              </h4>
+              <h3 class="font-bold text-lg">Integrate OpenAI API  </h3>
+              <p class="text-sm text-gray-600 mt-1 rounded-xl bg-white p-2">
+                Improve loading time, compress images, minify scripts...
+              </p>
+              <div class="mt-3 flex items-center justify-between text-sm">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p>12 March 2025</p>
+                </div>
+                <div>
+                  <button
+                    id="btn-Five"
+                    class="bg-[#4329db] cards text-white font-bold text-sm px-4 py-2 rounded-md"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card 6 -->
+            <div class="bg-[#f5f8ff] p-4 rounded-md shadow">
+              <h4 class="p-1 rounded-sm bg-white inline-block">Glassdoar</h4>
+              <h3 id="title-Six" class="font-bold text-lg">
+                Improve Job searching  
+              </h3>
+              <p class="text-sm text-gray-600 mt-1 rounded-xl bg-white p-2">
+                Improving Job listing, searching, new posts etc...
+              </p>
+              <div class="mt-3 flex items-center justify-between text-sm">
+                <div>
+                  <p class="text-gray-500">Deadline</p>
+                  <p>15 March 2025</p>
+                </div>
+                <div>
+                  <button
+                    id="btn-Six"
+                    class="cards bg-[#4329db] text-white font-bold text-sm px-4 py-2 rounded-md"
+                  >
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Site Content   -->
+        <aside class="col-span-4 space-y-4 h-full flex flex-col">
+          <div
+            id="activity"
+            class="bg-white rounded-md p-4 shadow flex flex-col flex-grow overflow-y-auto"
+          >
+            <div class="flex justify-center items-center gap-4 my-2">
+              <img class="w-6" src="./assets/activity.png" alt="" />
+              <h2 class="text-xl font-bold mb-2">Activity Log</h2>
+            </div>
+            <div class="flex justify-center">
+              <button
+                id="btn-activity"
+                class="bg-[#4329db] text-white font-bold text-sm px-4 py-2 rounded-md"
+              >
+                Clear History
+              </button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <script src="./script/script.js"></script>
+    <script src="./script/random.js"></script>
+    <script src="./script/date.js"></script>
+    <script src="/script/blogs.js"></script>
+  </body>
+</html>
